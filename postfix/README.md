@@ -23,3 +23,12 @@ insert
 
 	#sends abuse mails of bruteforce ip owners
 	58    23       *       *       *       root    /root/linux-scripts/postfix/sasl-fail-check.sh --email > /dev/null 2>&1
+
+without --email it will only show at status of ips trying to bruteforce
+
+##postgrey-report.sh
+
+just a quick postgrey report script
+
+
+
