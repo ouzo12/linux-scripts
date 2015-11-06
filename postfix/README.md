@@ -29,6 +29,8 @@ without --email it will only show at status of ips trying to bruteforce
 ##postgrey-report.sh
 
 just a quick postgrey report script
+NOTE: postgrey must be installed and used by postfix
 
+##requeue.sh
 
-
+Just re-queue all mails in postfix queue.
