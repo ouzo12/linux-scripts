@@ -34,3 +34,15 @@ NOTE: postgrey must be installed and used by postfix
 ##requeue.sh
 
 Just re-queue all mails in postfix queue.
+
+##delete-deferred.sh
+
+Delete all mails in deferred queue
+
+##delete-from-mailq.pl
+
+Delete specific mails from domain or email in queue
+
+##mailqueue-count.sh
+
+Count how many mails in queue

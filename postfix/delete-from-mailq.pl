@@ -1,0 +1,26 @@
+#!/usr/bin/perl
+#
+#script found at https://www.cyberciti.biz/tips/howto-postfix-flush-mail-queue.html
+ 
+$REGEXP = shift || die "no email-adress given (regexp-style, e.g. bl.*\@yahoo.com)!";
+ 
+@data = qx</usr/sbin/postqueue -p>;
+for (@data) {
+  if (/^(\w+)(\*|\!)?\s/) {
+     $queue_id = $1;
+  }
+  if($queue_id) {
+    if (/$REGEXP/i) {
+      $Q{$queue_id} = 1;
+      $queue_id = "";
+    }
+  }
+}
+ 
+#open(POSTSUPER,"|cat") || die "couldn't open postsuper" ;
+open(POSTSUPER,"|postsuper -d -") || die "couldn't open postsuper" ;
+ 
+foreach (keys %Q) {
+  print POSTSUPER "$_\n";
+};
+close(POSTSUPER);
