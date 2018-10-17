@@ -15,7 +15,6 @@ snds_enable=1
 
 #snds api key - the ps you chech must be in your snds ip accesslist
 sndskey="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
-sndskey="9236a252-c640-126a-c427-20c390e4aa5b"
 
 #snds tmp files
 sndsfile=/tmp/snds.txt
